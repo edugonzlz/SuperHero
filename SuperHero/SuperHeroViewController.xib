@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuperHeroViewController" customModule="SuperHero" customModuleProvider="target">
+            <connections>
+                <outlet property="dataStackView" destination="sQ9-6V-Rg0" id="FRd-0p-XDX"/>
+                <outlet property="imageView" destination="PZL-fh-t0k" id="vN9-bu-cPO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wFQ-cA-lv5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doS-UO-e9v">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tnw-1Q-6Rp">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-fh-t0k">
+                                    <rect key="frame" x="16" y="16" width="343" height="228.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="PZL-fh-t0k" secondAttribute="height" multiplier="3:2" id="RC6-BD-d37"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sQ9-6V-Rg0">
+                                    <rect key="frame" x="16" y="260.5" width="343" height="500"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="500" id="e6m-CV-aEj"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="sQ9-6V-Rg0" firstAttribute="leading" secondItem="Tnw-1Q-6Rp" secondAttribute="leading" constant="16" id="34O-4Z-DuZ"/>
+                                <constraint firstAttribute="trailing" secondItem="sQ9-6V-Rg0" secondAttribute="trailing" constant="16" id="DTD-GM-Owu"/>
+                                <constraint firstAttribute="trailing" secondItem="PZL-fh-t0k" secondAttribute="trailing" constant="16" id="VtZ-vm-jeW"/>
+                                <constraint firstItem="sQ9-6V-Rg0" firstAttribute="top" secondItem="PZL-fh-t0k" secondAttribute="bottom" constant="16" id="gTY-G7-GnA"/>
+                                <constraint firstItem="PZL-fh-t0k" firstAttribute="leading" secondItem="Tnw-1Q-6Rp" secondAttribute="leading" constant="16" id="h6m-Sv-BZK"/>
+                                <constraint firstItem="PZL-fh-t0k" firstAttribute="top" secondItem="Tnw-1Q-6Rp" secondAttribute="top" constant="16" id="ry7-mT-Be0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Tnw-1Q-6Rp" firstAttribute="top" secondItem="doS-UO-e9v" secondAttribute="top" id="7Ia-iT-fEa"/>
+                        <constraint firstAttribute="bottom" secondItem="Tnw-1Q-6Rp" secondAttribute="bottom" id="9Hn-IQ-SDs"/>
+                        <constraint firstItem="Tnw-1Q-6Rp" firstAttribute="leading" secondItem="doS-UO-e9v" secondAttribute="leading" id="RUb-cy-8gh"/>
+                        <constraint firstAttribute="trailing" secondItem="Tnw-1Q-6Rp" secondAttribute="trailing" id="pST-Fs-mcb"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="doS-UO-e9v" secondAttribute="bottom" id="9D0-d9-zKp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="doS-UO-e9v" secondAttribute="trailing" id="E4M-dl-9bJ"/>
+                <constraint firstItem="doS-UO-e9v" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="M5C-Sd-5Le"/>
+                <constraint firstItem="Tnw-1Q-6Rp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dkV-5S-uvA"/>
+                <constraint firstItem="doS-UO-e9v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hhY-rR-x9v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="60.5"/>
+        </view>
+    </objects>
+</document>
